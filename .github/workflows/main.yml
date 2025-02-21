@@ -42,12 +42,12 @@ jobs:
             eval "$(ssh-agent -s)"
             ssh-add ~/.ssh/ssh-praktikan67
             echo "Cek folder project";
-            [ ! -d "${HOME}/senpro/494790/modul02/senpro-github-action/"] &&
+            [ ! -d "${HOME}/senpro/494790/modul02/senpro-github-action/" ] &&
               {
                 echo "Repository belum di-clone. Cloning...";
                 mkdir -p ~/senpro/494790/modul02;
                 cd ~/senpro/494790/modul02;
-                git clone git@github.com:eben4ya/senpro-github-action.git
+                git clone https://github.com/eben4ya/senpro-github-action.git
                 cd ~/senpro/494790/modul02/senpro-github-action;
                 echo "Install Package dan Build Project";
                 npm install;
